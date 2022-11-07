@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background: linear-gradient(to top, #DADBD2, #DADBD2 85%, #009988 60%);
+  background: linear-gradient(to top, #DADBD2 85%, #009988 60%);
   height: 100vh;
 }
 
@@ -140,16 +140,16 @@ i.dark {
 
 .main-container .left {
   width: 40%;
-  background-color: #FFFFFF;
+  background-color: hsl(0, 0%, 100%);
   overflow: auto;
 }
-
 
 .bottom .notifications {
   background-color: #74DCFF;
   height: 60px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .bottom .notifications .new {
@@ -192,6 +192,7 @@ i.dark {
   justify-content: space-between;
   align-items: center;
   height: 65px;
+  cursor: pointer;
 }
 
 .bottom .list-contacts .contact .lft {
@@ -229,15 +230,31 @@ i.dark {
   width: 100%;
   background-image: url('../img/mine.jpg');
   background-size: cover;
+  display: flex;
+  justify-content: space-around;
 }
 
-.right .chat .user-color, .speaker-color {
-  width: 40%;
+.right .chat .user-color, 
+.right .chat .speaker-color {
   padding: 15px 20px;
   border-radius: 7px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
 }
+
+.right .chat .user-color p, 
+.right .chat .speaker-color p {
+  font-size: 0.8rem;
+}
+
+.right .chat .lft,
+.right .chat .rgt {
+  width: 40%;
+}
+
+
 
 .right .chat .user-color span, .speaker-color span {
    font-size: 0.6rem;
