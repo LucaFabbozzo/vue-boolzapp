@@ -6,11 +6,29 @@
 
 body {
   font-family: 'Lato', sans-serif;
+}
+
+.back-container {
   background-color: #D7DBD6;
   height: 100vh;
+  position: relative;
 }
 
 .top-back {
   background-color: #009988;
-  height: 25%;
+  height: 20%;
+}
+
+.main-container {
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 150px;
+  right: 150px;
+  transform: translateX(-50%,50%);
+  z-index: 999;
+  min-width: 700px;
+  height: 90%;
+  background-color: #EAEAEA;
+  margin:auto;
 }
