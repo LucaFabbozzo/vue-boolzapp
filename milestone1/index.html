@@ -42,11 +42,11 @@
           <input type="text" placeholder="Cerca o inizia nuova chat">
         </div>
         <div class="list-contacts">
-          <div class="contact">
+          <div v-for="(contact, index) in contacts" class="contact">
             <div class="lft">
-              <img class="avatar" src="./img/avatar_1.jpg" alt="_1">
+              <img class="avatar" :src="contact.avatar" :alt="contact.avatar">
               <div class="name-login">
-                <span class="name">Michele</span>
+                <span class="name">{{contact.name}}</span>
                 <span class="login">Ultimo messaggio inviato</span>
               </div>
             </div>
