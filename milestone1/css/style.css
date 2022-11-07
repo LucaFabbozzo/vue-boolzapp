@@ -23,6 +23,38 @@ i.blue {
   padding: 10px;
 }
 
+i.dark {
+  color: #646464;
+}
+
+/* special classes */
+
+.selected {
+  background-color: #E9EBEB;
+}
+
+ .user-color {
+  background-color: #CCFAB3;
+ }
+
+ .speaker-color {
+  background-color: #f9f9f9;
+ }
+ 
+ .user-color, .speaker-color {
+   width: 40%;
+   padding: 15px 20px;
+   border-radius: 7px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .user-color span, .speaker-color span {
+    font-size: 0.6rem;
+    color: #B1B1B1;
+ }
+
+
 
  /* container */
 
@@ -43,11 +75,6 @@ i.blue {
   justify-content: center;
 }
 
-.main-container .right {
-  display: flex;
-  flex-direction: column;
-  border-left: 1px solid rgb(207, 207, 207);
-}
 
 .main-container img.avatar {
   width: 40px;
@@ -70,22 +97,28 @@ i.blue {
 }
 
 
-.left {
+.main-container .left {
   width: 40%;
   background-color: #FFFFFF;
   overflow: auto;
 }
 
-.right {
+
+.main-container .right {
+  display: flex;
+  flex-direction: column;
   width: 80%;
-  overflow: auto;
+  border-left: 1px solid rgb(207, 207, 207);
 }
 
-.right img {
-  width: 100%;
+.main-container .right .chat {
   height: calc(100% - 100px);
-  object-fit: cover;
+  width: 100%;
+  background-image: url('../img/mine.jpg');
+  background-size: cover;
 }
+
+
 
 /* main bars */
 
@@ -202,6 +235,7 @@ i.blue {
 
 .bottom .list-contacts .contact .lft {
   display: flex;
+  align-items: center;
 }
 
 .bottom .list-contacts .contact .lft .name-login {
