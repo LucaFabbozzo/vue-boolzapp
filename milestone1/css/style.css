@@ -8,6 +8,8 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+/* containers */
+
 .back-container {
   background-color: #D7DBD6;
   height: 100vh;
@@ -31,4 +33,19 @@ body {
   height: 90%;
   background-color: #EAEAEA;
   margin:auto;
+  display: flex;
+}
+
+/* main */
+
+.main-container .left {
+  width: 20%;
+  background-color: grey;
+  border: 1 px solid black;
+}
+
+.main-container .right {
+  width: 80%;
+  background-color: #2d2d2d;
+  border: 1px solid black;
 }
