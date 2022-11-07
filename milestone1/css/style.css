@@ -6,4 +6,11 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: #D7DBD6;
+  height: 100vh;
+}
+
+.top-back {
+  background-color: #009988;
+  height: 25%;
 }
