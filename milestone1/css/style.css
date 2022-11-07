@@ -18,7 +18,6 @@ body {
 }
 
 .main-container {
-  background-color: #FFFFFF;
   min-width: 1000px;
   height: calc(100% - 40px);
   display: flex;
@@ -27,12 +26,35 @@ body {
 
 .left {
   width: 40%;
-  background-color: grey  ;
+  background-color: #FFFFFF;
+  overflow: auto;
 }
 
 .right {
   width: 80%;
+  overflow: auto;
 }
 
+.right img {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+.left .top-bar,
+.right .top-bar {
+  height: 50px;
+  background-color: #EAEAEA;
+}
+
+.main-container .right {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.right .bottom-bar{
+  background-color: #F4EEEA;
+  height: 50px;
+}
 
 
