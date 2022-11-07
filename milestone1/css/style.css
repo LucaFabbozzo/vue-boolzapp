@@ -26,7 +26,7 @@ i.blue {
 
  /* container */
 
-.container {
+#app {
   height: 100%;
   display: flex;
   align-items: center;
@@ -64,20 +64,25 @@ i.blue {
 }
 
 
+.main-container span.hours {
+  font-size: 0.6rem;
+  color: #B1B1B1;
+}
+
+
 .left {
   width: 40%;
   background-color: #FFFFFF;
-  overflow: auto;
 }
 
 .right {
   width: 80%;
-  overflow: auto;
 }
 
 .right img {
   width: 100%;
   height: calc(100% - 100px);
+  object-fit: cover;
 }
 
 /* main bars */
@@ -180,4 +185,33 @@ i.blue {
 
 .find input::placeholder {
   font-size: 0.7rem;
+}
+
+
+/* contacts */
+
+.bottom .list-contacts .contact {
+  border-bottom: 1px solid #B1B1B1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.bottom .list-contacts .contact .lft {
+  display: flex;
+}
+
+.bottom .list-contacts .contact .lft .name-login {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.bottom .list-contacts .contact .lft img {
+  margin-left: 10px;
+}
+
+.bottom .list-contacts .contact .rgt span {
+  margin-right: 10px;
 }
