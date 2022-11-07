@@ -163,3 +163,21 @@ i.blue {
 .bottom .notifications span {
   margin-left: 10px;
 }
+
+.find {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  background-color: #EAEAEA;
+}
+ 
+.find input {
+  width: 98%;
+  height: 75%;
+  border: none;
+}
+
+.find input::placeholder {
+  font-size: 0.7rem;
+}
