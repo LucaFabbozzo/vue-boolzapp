@@ -16,6 +16,13 @@ i {
   color: #B1B1B1;
 }
 
+i.blue {
+  color: #74DCFF;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
 
  /* container */
 
@@ -75,7 +82,6 @@ i {
 
 /* main bars */
 
-
 .left .top-bar,
 .right .top-bar {
   height: 50px;
@@ -128,10 +134,32 @@ i {
  flex-direction: column;
 }
 
-
 .right .top-bar .rgt-items,
 .left .top-bar .rgt-items {
   width: 100px;
   display: flex;
   justify-content: space-evenly;
+}
+
+
+/* bottom left / contact lists */
+
+.bottom .notifications {
+  background-color: #74DCFF;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.bottom .notifications .new {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom .notifications i {
+  margin-left: 20px;
+}
+
+.bottom .notifications span {
+  margin-left: 10px;
 }
