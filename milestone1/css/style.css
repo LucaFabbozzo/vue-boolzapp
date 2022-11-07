@@ -18,7 +18,8 @@ body {
 }
 
 .main-container {
-  min-width: 1000px;
+  width: 80%;
+  min-width: 700px;
   height: calc(100% - 40px);
   display: flex;
   justify-content: center;
