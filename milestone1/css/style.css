@@ -73,10 +73,12 @@ i.blue {
 .left {
   width: 40%;
   background-color: #FFFFFF;
+  overflow: auto;
 }
 
 .right {
   width: 80%;
+  overflow: auto;
 }
 
 .right img {
