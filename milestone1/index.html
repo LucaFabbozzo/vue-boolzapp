@@ -42,11 +42,16 @@
           </div>
         </div>
         <div class="find">
+          <div><i class="fa-solid fa-magnifying-glass find-input"></i></div>
           <input type="text" placeholder="Cerca o inizia nuova chat">
         </div>  
-        
         <div class="list-contacts">
-          <div v-for="(contact, index) in contacts" class="contact">
+          <div 
+          :class="{'active': contact.visible}" 
+          v-for="(contact, index) in contacts" 
+          @click="changeActive(index)"
+          :class="{'active' : index === counterUser}"
+          class="contact">
             <div class="lft">
               <img class="avatar" :src="contact.avatar" :alt="contact.avatar">
               <div class="name-login">
@@ -80,14 +85,11 @@
           </div>
         </div>
         <!-- chat -->
-        <div class="chat"> 
-          <div class="lft">
+        <div class="chat clearfix"> 
             <div class="speaker-color">
               <p>Si tutto ok!</p>
               <span>16.15</span>
             </div>
-          </div>
-            <div class="rgt">
             <div class="user-color">
               <p>Hai portato a spasso il cane?</p>
               <span>15.30</span>
@@ -96,8 +98,6 @@
               <p>Ricordati di stendere i panni</p>
               <span>15.50</span>
             </div>
-          </div>
-         
         </div>
         <!-- bottom bar -->
         <div class="bottom-bar">
