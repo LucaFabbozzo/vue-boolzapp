@@ -31,13 +31,16 @@ i.blue {
 
 i.dark {
   color: #646464;
+  font-size: 1.2rem
 }
 
 i.find-input {
   background-color: #FFFFFF;
-  margin-left: 10px;
   padding: 5px 5px;
-  padding-left: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 
@@ -46,15 +49,6 @@ i.find-input {
 .active {
   background-color: #e1e1e1;
 }
-
- .user-color {
-  background-color: #CCFAB3;
- }
-
- .speaker-color {
-  background-color: #f9f9f9;
- }
-
 
  /* container */
 
@@ -112,7 +106,7 @@ i.find-input {
 }
 
 .left .top-bar {
-  height: 50px;
+  height: 60px;
   background-color: #EAEAEA; 
   display: flex;
   justify-content: space-between;
@@ -134,11 +128,12 @@ i.find-input {
 
 .left .top-bar img.avatar{
   margin-left: 10px;
+  margin-right: 5px;
 }
 
 .left .up .notifications {
   background-color: #74DCFF;
-  height: 60px;
+  height: 50px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -169,13 +164,13 @@ i.find-input {
   width: 85%;
   height: 75%;
   border: none;
-  padding-left: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .left .up .find input::placeholder {
   font-size: 0.7rem;
 }
-
 
 .main-container .left .down {
   overflow-y: scroll;
@@ -186,7 +181,6 @@ i.find-input {
   height: 100%;
 }
 
-
 .left .down  .list-contacts .contact {
   border-bottom: 1px solid #ebebeb;
   display: flex;
@@ -194,6 +188,10 @@ i.find-input {
   align-items: center;
   height: 65px;
   cursor: pointer;
+}
+
+.left .down  .list-contacts .contact:hover {
+  background-color:  #e1e1e1;
 }
 
 .left .down  .list-contacts .contact .lft {
@@ -224,6 +222,19 @@ i.find-input {
 
 
 /* RIGHT */
+.main-container .right {
+  width: 80%;
+  border-left: 1px solid rgb(207, 207, 207);
+}
+
+.right .top-bar {
+  height: 50px;
+  background-color: #EAEAEA;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 .right .top-bar .rgt-items{
   width: 100px;
@@ -257,39 +268,32 @@ i.find-input {
   margin-left: 10px;
 }
 
-.right .top-bar {
-  height: 50px;
-  background-color: #EAEAEA;  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-
-.main-container .right {
-  width: 80%;
-  border-left: 1px solid rgb(207, 207, 207);
-}
-
-.main-container .right .chat {
+.right .chat {
   height: calc(100% - 100px);
-  width: 100%;
   background-image: url('../img/mine.jpg');
   background-size: cover;
   overflow-y: scroll;
+  padding: 20px 150px
 }
 
-.right .chat .speaker-color {
-  padding: 15px 20px;
-  border-radius: 7px;
-  float: left;
-}
 
-.right .chat .user-color {
+.user-color {
+  background-color: #CCFAB3;
   padding: 15px 20px;
   border-radius: 7px;
+  margin: 10px;
+  float: right;
+ }
+
+.speaker-color {
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 7px;
+  margin: 10px;
   float: left;
-}
+ }
+
 
 
 .right .chat .user-color p, 
@@ -303,7 +307,7 @@ i.find-input {
    color: #B1B1B1;
 }
 
-.main-container .right .bottom-bar{
+.right .bottom-bar{
   background-color: #F4EEEA;
   height: 50px;
   display: flex;

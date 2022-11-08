@@ -17,98 +17,99 @@
   <div id="app">
 
     <div class="main-container">
-      
-      <!-- LEFT -->
-      <div class="left">
-        <!-- up -->
-        <div class="up">
-          <div class="top-bar">
-              <div class="lft-items">
-                  <img class="avatar" src="./img/avatar_io.jpg" alt="io">
-                  <span class="name">Sofia</span>
-              </div>
-              <div class="rgt-items">
-                <i class="fa-solid fa-circle-notch"></i>
-                <i class="fa-solid fa-message"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-              </div>
+        
+        <!-- LEFT -->
+        <div class="left">
+          <!-- up -->
+          <div class="up">
+            <div class="top-bar">
+                <div class="lft-items">
+                    <img class="avatar" src="./img/avatar_io.jpg" alt="io">
+                    <span class="name">Sofia</span>
+                </div>
+                <div class="rgt-items">
+                  <i class="fa-solid fa-circle-notch"></i>
+                  <i class="fa-solid fa-message"></i>
+                  <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </div>
+            <div class="notifications">
+                <i class="fa-solid fa-bell-slash blue"></i>
+                <div class="new">
+                  <span class="name">Ricevi notifiche di nuovi messaggi</span>
+                  <span class="login">Attiva notifiche desktop</span>
+                </div>
+            </div>
+            <div class="find">
+                <div><i class="fa-solid fa-magnifying-glass find-input"></i></div>
+                <input type="text" placeholder="Cerca o inizia nuova chat">
+            </div>  
           </div>
-          <div class="notifications">
-              <i class="fa-solid fa-bell-slash blue"></i>
-              <div class="new">
-                <span class="name">Ricevi notifiche di nuovi messaggi</span>
-                <span class="login">Attiva notifiche desktop</span>
-              </div>
-          </div>
-          <div class="find">
-              <div><i class="fa-solid fa-magnifying-glass find-input"></i></div>
-              <input type="text" placeholder="Cerca o inizia nuova chat">
-          </div>  
-        </div>
-        <!-- down -->
-        <div class="down">
-          <div class="list-contacts">
-            <div 
-              :class="{'active': contact.visible}" 
-              v-for="(contact, index) in contacts" 
-              class="contact">
-                <div class="lft">
-                  <img class="avatar" :src="contact.avatar" :alt="contact.avatar">
-                  <div class="name-login">
-                    <span class="name">{{contact.name}}</span>
-                    <span class="login">Ultimo messaggio inviato</span>
+          <!-- down -->
+          <div class="down">
+            <div class="list-contacts">
+
+              <!-- contact list -->
+              <div 
+                :class="{'active': contact.visible}" 
+                v-for="(contact, index) in contacts" 
+                @click="userActive = index"
+                class="contact">
+                  <div class="lft">
+                    <img class="avatar" :src="contact.avatar" :alt="contact.avatar">
+                    <div class="name-login">
+                      <span class="name">{{contact.name}}</span>
+                      <span class="login">Ultimo messaggio inviato</span>
+                    </div>
+                  </div>
+                  <div class="rgt">
+                    <span class="hours">12:00</span>
                   </div>
                 </div>
-                <div class="rgt">
-                  <span class="hours">12:00</span>
-                </div>
+
               </div>
             </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+        <div class="right">
+          <!-- top-bar -->
+          <div class="top-bar">
+            <div class="lft-items">
+              <img class="avatar" src="./img/avatar_1.jpg" alt="michele">  
+              <div class="users">
+                <span class="name">Michele</span>
+                <span class="login">Ultimo accesso oggi alle 12.00</span>
+              </div>
+            </div>
+            <div class="rgt-items">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
           </div>
 
-      </div>
-
-
-      <!-- RIGHT -->
-      <div class="right">
-        <!-- top-bar -->
-        <div class="top-bar">
-          <div class="lft-items">
-            <img class="avatar" src="./img/avatar_1.jpg" alt="michele">  
-            <div class="users">
-              <span class="name">Michele</span>
-              <span class="login">Ultimo accesso oggi alle 12.00</span>
+          <!-- Chats -->
+          <div class="chat clearfix"> 
+            <div 
+            :class="userColor"
+            v-for = "message in contacts[userActive].messages"
+            >
+              <p>{{message.message}}</p>
+              <span>{{message.date}}</span>
             </div>
+
           </div>
-          <div class="rgt-items">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-paperclip"></i>
-            <i class="fa-solid fa-ellipsis-vertical"></i>
+
+          <!-- bottom bar -->
+          <div class="bottom-bar">
+            <i class="fa-regular fa-face-smile dark"></i>
+            <input type="text" placeholder="Scrivi un messaggio">
+            <i class="fa-solid fa-microphone dark"></i>
           </div>
         </div>
-        <!-- chat -->
-        <div class="chat clearfix"> 
-            <div class="speaker-color">
-              <p>Si tutto ok!</p>
-              <span>16.15</span>
-            </div>
-            <div class="user-color">
-              <p>Hai portato a spasso il cane?</p>
-              <span>15.30</span>
-            </div>
-            <div class="user-color">
-              <p>Ricordati di stendere i panni</p>
-              <span>15.50</span>
-            </div>
-        </div>
-        <!-- bottom bar -->
-        <div class="bottom-bar">
-          <i class="fa-regular fa-face-smile dark"></i>
-          <input type="text" placeholder="Scrivi un messaggio">
-          <i class="fa-solid fa-microphone dark"></i>
-        </div>
-      </div>
-
 
     </div>
 
