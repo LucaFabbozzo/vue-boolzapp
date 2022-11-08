@@ -195,10 +195,27 @@ createApp({
         message: this.newMessage,
         status: 'sent'
       }
-      this.contacts[this.userActive].messages.push(msg),
-      this.newMessage = ''
+      this.contacts[this.userActive].messages.push(msg);
+      this.newMessage = '';
+    },
+    getResponse() {
+          const rsp = {
+          date: '15:51',
+          message: 'OK',
+          status: 'received'
+          }
+        this.contacts[this.userActive].messages.push(rsp);
+      },
+      startClock(){
+        setTimeout(() => {
+           this.getResponse();
+      }, 1000)
+    },
+  },  
+    mounted(){
+      this.startClock();
     }
-  }
+  
 }).mount('#app')
 
 
