@@ -93,6 +93,7 @@
           <!-- Chats -->
           <div class="chat clearfix"> 
             <div 
+            :class="message.status"
             v-for = "message in contacts[userActive].messages"
             >
               <p>{{message.message}}</p>

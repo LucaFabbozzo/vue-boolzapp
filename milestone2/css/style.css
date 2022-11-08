@@ -278,33 +278,32 @@ i.find-input {
 }
 
 
-.user-color {
+.sent{
   background-color: #CCFAB3;
-  padding: 15px 20px;
+  padding: 10px 15px;
   border-radius: 7px;
-  margin: 10px;
+  margin: 7px;
   float: right;
  }
 
-.speaker-color {
+.received{
   background-color: #f9f9f9;
-  padding: 15px 20px;
+  padding: 10px 20px;
   border-radius: 7px;
-  margin: 10px;
+  margin: 7px;
   float: left;
  }
 
-
-
-.right .chat .user-color p, 
-.right .chat .speaker-color p {
+.right .chat .sent p, 
+.right .chat .received p {
   font-size: 0.8rem;
 }
 
-
-.right .chat .user-color span, .speaker-color span {
+.right .chat .sent span, .received span {
    font-size: 0.6rem;
+   padding-top: 5px;
    color: #B1B1B1;
+   float: right
 }
 
 .right .bottom-bar{
