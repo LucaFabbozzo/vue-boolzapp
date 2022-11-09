@@ -283,7 +283,8 @@ i.find-input {
   background-color: #CCFAB3;
   padding: 10px 15px;
   border-radius: 7px;
-  margin: auto;
+  margin-left: 30px;
+  margin-bottom: 10px;
   float: right;
  }
 
@@ -291,7 +292,8 @@ i.find-input {
   background-color: #f9f9f9;
   padding: 10px 15px;
   border-radius: 7px;
-  margin: auto;
+  margin-right: 30px;
+  margin-bottom: 10px;
   float: left;
  }
 

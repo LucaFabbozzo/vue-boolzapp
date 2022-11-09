@@ -8,7 +8,8 @@ const dt = luxon.DateTime
 
 const now = dt.now()
 
-console.log(now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS));
+const dateNow = now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+
 
 createApp({
   data(){
@@ -185,7 +186,7 @@ createApp({
   methods: {
     addNewMessage() {
       const msg = {
-        date: now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+        date: dateNow,
         message: this.newMessage,
         status: 'sent'
       }
@@ -195,7 +196,7 @@ createApp({
     },
     getResponse() {
           const rsp = {
-          date: now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS),
+          date: dateNow,
           message: 'OK',
           status: 'received'
           }
@@ -206,11 +207,12 @@ createApp({
           this.getResponse()
       }, 1000)
       },
-      filteredNames(){
-        this.contacts[this.userActive].filter((element) =>
-        element.toLowerCase().includes(this.newSearch.toLowerCase())
-      )
-      }
+        filteredNames(){
+          console.log('')
+          // this.contacts[this.userActive].filter((element) =>
+          // element.includes(this.newSearch)
+          // )
+        }
      },  
     mounted(){
       console.log('montata')
