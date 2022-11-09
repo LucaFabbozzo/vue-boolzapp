@@ -108,7 +108,7 @@ i.find-input {
 
 .left .top-bar {
   height: 60px;
-  background-color: #EAEAEA; 
+  background-color: #F0F2F5; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -230,7 +230,7 @@ i.find-input {
 
 .right .top-bar {
   height: 60px;
-  background-color: #EAEAEA;  
+  background-color: #F0F2F5;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -282,20 +282,20 @@ i.find-input {
 
 .sent{
   background-color: #CCFAB3;
-  padding: 10px 15px;
+  padding: 5px 8px;
   border-radius: 7px;
   margin: 10px;
   float: right;
-  width: 70%;
+  min-width: 50%;
  }
 
 .received{
   background-color: #f9f9f9;
-  padding: 10px 15px;
+  padding: 5px 8px;
   border-radius: 7px;
   margin: 10px;
   float: left;
-  width: 70%;
+  min-width: 50%;
  }
 
 .right .chat .sent p, 
@@ -311,7 +311,7 @@ i.find-input {
 }
 
 .right .bottom-bar{
-  background-color: #F4EEEA;
+  background-color: #F0F2F5;
   height: 60px;
   display: flex;
   justify-content: space-evenly;
