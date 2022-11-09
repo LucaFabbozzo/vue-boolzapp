@@ -273,6 +273,7 @@ i.find-input {
   height: calc(100% - 100px);
   background-image: url('../img/mine.jpg');
   background-size: cover;
+  background-position: center;
   overflow-y: scroll;
   padding: 20px 150px
 }
@@ -282,15 +283,15 @@ i.find-input {
   background-color: #CCFAB3;
   padding: 10px 15px;
   border-radius: 7px;
-  margin: 7px;
+  margin: auto;
   float: right;
  }
 
 .received{
   background-color: #f9f9f9;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 7px;
-  margin: 7px;
+  margin: auto;
   float: left;
  }
 
