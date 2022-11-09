@@ -222,9 +222,4 @@ createApp({
 
 
 
-// filteredList() {
-//   return this.postList.filter(post => {
-//     return post.title.toLowerCase().includes(this.search.toLowerCase())
-//   })
-// }
 
