@@ -75,20 +75,21 @@ i.find-input {
   height: calc(100% - 40px);
   display: flex;
   justify-content: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 
 .main-container img.avatar {
-  width: 40px;
+  width: 45px;
   border-radius: 50%;
 }
 
 
 .main-container span.name {
- font-size: 0.8rem;
+ font-size: 0.9rem;
 }
 
 .main-container span.login {
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   color: #B1B1B1;
 }
 
@@ -200,7 +201,7 @@ i.find-input {
 }
 
 .left .down  .list-contacts .contact:hover {
-  background-color:  #e1e1e1;
+  background-color:  #F0F2F5;
 }
 
 .left .down  .list-contacts .contact .lft {
@@ -290,27 +291,29 @@ i.find-input {
 
 .sent{
   background-color: #CCFAB3;
-  padding: 5px 8px;
+  padding: 9px 15px;
   border-radius: 7px;
   margin: 10px;
   float: right;
   min-width: 50%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
  }
 
 .received{
   background-color: #f9f9f9;
-  padding: 5px 8px;
+  padding: 9px 15px;
   border-radius: 7px;
   margin: 10px;
   float: left;
   min-width: 50%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
  }
 
 .right .chat .sent p, 
 .right .chat .received p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .right .chat .sent span, .received span {
