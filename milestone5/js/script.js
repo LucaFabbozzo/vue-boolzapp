@@ -179,7 +179,8 @@ createApp({
       userActive: 0,
       statusReceived: true,
       newMessage: '',
-      newSearch: ''
+      newSearch: '',
+      dropDisplay: true
     }
   },
   methods: {
@@ -205,8 +206,11 @@ createApp({
         setTimeout(() => {
           this.getResponse()
       }, 1000)
+      },
+      eventChat(){
+        this.dropDisplay = !this.dropDisplay
       }
-     },  
+     },
     mounted(){
       console.log('montata')
     }

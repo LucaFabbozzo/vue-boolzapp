@@ -101,13 +101,14 @@
           <!-- Chats -->
           <div class="chat clearfix"> 
             <div 
+            @click="eventChat()"
             :class="message.status"
             v-for = "message in contacts[userActive].messages"
             >
               <i class="fa-solid fa-chevron-down delete-chat"></i>
               <p>{{message.message}}</p>
               <span>{{message.date}}</span>
-              <div class="drop-down">
+              <div :class="{'drop-block' : dropDisplay}" class="drop-down">
                 <p>Delete</p>
               </div>
             </div>

@@ -290,7 +290,6 @@ i.delete-chat {
 
 }
 
-
 .drop-down {
   position: absolute;
   width: 200px;
@@ -302,13 +301,18 @@ i.delete-chat {
   display: none;
 }
 
+.drop-block {
+  display: block;
+}
+
 .sent:hover i.delete-chat,
 .received:hover i.delete-chat {
   display: block;
 }
 
 
-.sent{
+.sent ,
+.received {
   position: relative;
   background-color: #CCFAB3;
   padding: 5px 8px;
@@ -317,18 +321,17 @@ i.delete-chat {
   float: right;
   min-width: 50%;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
  }
 
-.received{
-  position: relative;
-  background-color: #f9f9f9;
-  padding: 5px 8px;
-  border-radius: 7px;
-  margin: 10px;
-  float: left;
-  min-width: 50%;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+ .sent {
+  float: right;
  }
+
+ .received {
+  float: left;
+ }
+
 
 .right .chat .sent p, 
 .right .chat .received p {
