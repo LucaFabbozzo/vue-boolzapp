@@ -25,7 +25,7 @@
           <div class="up">
             <div class="top-bar">
                 <div class="lft-items">
-                    <img class="avatar" src="./img/avatar_io.png" alt="io">
+                    <img class="avatar io" src="./img/avatar_io.jpg" alt="io">
                     <span class="name">Luca</span>
                 </div>
                 <div class="rgt-items">
@@ -47,6 +47,7 @@
                 v-model.trim="newSearch" 
                 type="text" 
                 placeholder="Cerca o inizia nuova chat"
+                @keyup="filteredNames()"
                 >
                 
             </div>  
