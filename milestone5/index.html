@@ -66,11 +66,11 @@
                     <img class="avatar" :src="contact.avatar" :alt="contact.avatar">
                     <div class="name-login">
                       <span class="name">{{contact.name}}</span>
-                      <span class="login">Ultimo messaggio inviato</span>
+                      <span class="login">{{contacts[userActive].messages[contacts[userActive].messages.length - 1].message}}</span>
                     </div>
                   </div>
                   <div class="rgt">
-                    <span class="hours">12.00</span>
+                    <span class="hours">{{contacts[userActive].messages[contacts[userActive].messages.length - 1].date}}</span>
                   </div>
                 </div>
 
