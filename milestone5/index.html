@@ -47,7 +47,6 @@
                 v-model.trim="newSearch" 
                 type="text" 
                 placeholder="Cerca o inizia nuova chat"
-                @keyup="filteredNames()"
                 >
                 
             </div>  
@@ -100,15 +99,15 @@
 
           <!-- Chats -->
           <div class="chat clearfix"> 
-            <div 
+            <div   
             @click="eventChat()"
+             v-for = "message in contacts[userActive].messages"
             :class="message.status"
-            v-for = "message in contacts[userActive].messages"
             >
               <i class="fa-solid fa-chevron-down delete-chat"></i>
               <p>{{message.message}}</p>
               <span>{{message.date}}</span>
-              <div :class="{'drop-block' : dropDisplay}" class="drop-down">
+              <div :class="{'item-block' : dropToggle}" class="drop-down">
                 <p>Delete</p>
               </div>
             </div>

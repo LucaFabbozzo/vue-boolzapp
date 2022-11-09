@@ -177,10 +177,9 @@ createApp({
         }
       ],
       userActive: 0,
-      statusReceived: true,
       newMessage: '',
       newSearch: '',
-      dropDisplay: true
+      dropToggle: true
     }
   },
   methods: {
@@ -208,7 +207,7 @@ createApp({
       }, 1000)
       },
       eventChat(){
-        this.dropDisplay = !this.dropDisplay
+        this.dropToggle = !this.dropToggle
       }
      },
     mounted(){

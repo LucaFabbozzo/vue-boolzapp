@@ -22,6 +22,10 @@ i {
   color: #B1B1B1;
 }
 
+i:hover {
+  color: #646464;
+}
+
 i.blue {
   color: #74DCFF;
   background-color: white;
@@ -32,6 +36,10 @@ i.blue {
 i.dark {
   color: #646464;
   font-size: 1.2rem
+}
+
+i.dark:hover {
+  color: #B1B1B1
 }
 
 i.find-input {
@@ -63,7 +71,7 @@ i.find-input {
 
 .main-container {
   width: 80%;
-  min-width: 700px;
+  min-width: 800px;
   height: calc(100% - 40px);
   display: flex;
   justify-content: center;
@@ -158,7 +166,7 @@ i.find-input {
   align-items: center;
   justify-content: center;
   height: 35px;
-  background-color: #EAEAEA;
+  background-color: #F1F2F5;
 }
  
 .left .up .find input {
@@ -287,6 +295,7 @@ i.find-input {
   margin: 10px;
   float: right;
   min-width: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
  }
 
 .received{
@@ -296,6 +305,7 @@ i.find-input {
   margin: 10px;
   float: left;
   min-width: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
  }
 
 .right .chat .sent p, 
