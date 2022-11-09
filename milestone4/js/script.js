@@ -4,11 +4,9 @@
 const { createApp } = Vue;
 
 //luxon
-const dt = luxon.DateTime
-
-const now = dt.now()
-
-const dateNow = now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+const dt = luxon.DateTime;
+const now = dt.now();
+const dateNow = now.setLocale('es').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
 
 
 createApp({
@@ -197,7 +195,7 @@ createApp({
     getResponse() {
           const rsp = {
           date: dateNow,
-          message: 'OK',
+          message: 'ok',
           status: 'received'
           }
         this.contacts[this.userActive].messages.push(rsp);
@@ -206,21 +204,13 @@ createApp({
         setTimeout(() => {
           this.getResponse()
       }, 1000)
-      },
-        filteredNames(){
-          console.log('')
-          // this.contacts[this.userActive].filter((element) =>
-          // element.includes(this.newSearch)
-          // )
-        }
+      }
      },  
     mounted(){
       console.log('montata')
     }
   
 }).mount('#app')
-
-
 
 
 
