@@ -43,12 +43,6 @@ i.find-input {
   border-bottom-left-radius: 5px;
 }
 
-i.delete-chat {
-  float: right;
-  cursor: pointer;
-  font-size: 0.7rem;
-}
-
 
 
 /* special classes */
@@ -286,6 +280,17 @@ i.delete-chat {
   padding: 20px 150px
 }
 
+/* drop-down */
+
+i.delete-chat {
+  float: right;
+  font-size: 0.7rem;  
+  cursor: pointer;
+  display: none;
+
+}
+
+
 .drop-down {
   position: absolute;
   width: 200px;
@@ -294,6 +299,12 @@ i.delete-chat {
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
   left: 80%;
+  display: none;
+}
+
+.sent:hover i.delete-chat,
+.received:hover i.delete-chat {
+  display: block;
 }
 
 
