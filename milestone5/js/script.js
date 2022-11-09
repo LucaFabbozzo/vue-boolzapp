@@ -1,4 +1,4 @@
-// Milestone 5 - opzionale
+//Milestone5
 // ● Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 // ● Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
 
@@ -177,9 +177,9 @@ createApp({
         }
       ],
       userActive: 0,
+      statusReceived: true,
       newMessage: '',
-      newSearch: '',
-      dropToggle: true
+      newSearch: ''
     }
   },
   methods: {
@@ -205,11 +205,8 @@ createApp({
         setTimeout(() => {
           this.getResponse()
       }, 1000)
-      },
-      eventChat(){
-        this.dropToggle = !this.dropToggle
       }
-     },
+     },  
     mounted(){
       console.log('montata')
     }
