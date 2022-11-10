@@ -179,7 +179,8 @@ createApp({
       userActive: 0,
       statusReceived: true,
       newMessage: '',
-      newSearch: ''
+      newSearch: '',
+      chevBlock: false
     }
   },
   methods: {
@@ -205,6 +206,9 @@ createApp({
         setTimeout(() => {
           this.getResponse()
       }, 1000)
+      },
+      eventChat(){
+        this.chevBlock = !this.chevBlock
       }
      },  
     mounted(){
