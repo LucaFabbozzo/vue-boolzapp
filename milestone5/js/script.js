@@ -181,7 +181,7 @@ createApp({
       newMessage: '',
       newSearch: '',
       dropBlock: false,
-      isChatShow: true
+      isChatShow: false
     }
   },
   methods: {
@@ -212,17 +212,21 @@ createApp({
         this.dropBlock = !this.dropBlock
       },
       deleteChat(index){
-        if(this.contacts[index].messages[index] === this.isChatShow) {
-          this.messages.splice(index, 1);
-     }
+        this.contacts[this.userActive].messages.splice(index, 1);
+      },
     },
     mounted(){
       console.log('montata')
+    },
+    created(){
+      
     }
-  }
-  
-}).mount('#app')
+    
+  }).mount('#app')
 
+
+
+  // Perché cerchi di mostrare l’anteprima su array length - 1 che non esiste in quel caso, ti serve una function che ti restituisce stringa vuota se != 0
 
 
 

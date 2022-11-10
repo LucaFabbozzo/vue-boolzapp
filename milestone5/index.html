@@ -103,7 +103,6 @@
             @click="eventChat()"              
             :class="message.status"
             v-for = "(message, index) in contacts[userActive].messages"
-            :key="message.id"
             >
             <i  class="fa-solid fa-chevron-down delete-chat"></i>
               <p>{{message.message}}</p>
