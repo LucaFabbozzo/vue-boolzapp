@@ -101,16 +101,15 @@
           <div class="chat clearfix"> 
             <div 
             @click="eventChat()"              
-            v-show="isChatShow"
             :class="message.status"
-            v-for = "message in contacts[userActive].messages"
+            v-for = "(message, index) in contacts[userActive].messages"
             :key="message.id"
             >
             <i  class="fa-solid fa-chevron-down delete-chat"></i>
               <p>{{message.message}}</p>
               <span>{{message.date}}</span>
               <div 
-              @click="toggleMessage()"
+              @click="deleteChat(index)"
               :class="{'block-item' : this.dropBlock}" 
               class="drop-down"
               >
